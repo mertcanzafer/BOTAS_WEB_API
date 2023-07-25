@@ -1,0 +1,42 @@
+﻿@page
+@model MyProject.Pages.Clients.IndexModel
+@{
+}
+
+<br>
+<h2>BOTAS GAZ AKIS BİLGİLERİ</h2>
+<a class='btn btn-primary btn-sm' href = '/Clients/Create'>Yeni akis</a>
+<table class ="table">
+	<thread>
+		  <tr>
+			  <th>id</th>
+			  <th>Noktalar</th>
+			  <th>Tarih</th>
+			  <th>DGdeger</th>
+			  <th>Enlem</th>
+			  <th>Boylam</th>
+			  <th>Güncelle Veya Sil</th>
+
+		  </tr>
+
+	</thread>
+	<tbody>
+		@foreach(var item in Model.ListClients)
+		{
+			<tr>
+				<td>@item.id</td>
+				<td>@item.Noktalar</td>
+				<td>@item.Tarih</td>
+				<td>@item.DGdeger</td>
+				<td>@item.enlem</td> 
+				<td>@item.boylam</td>
+				<td>
+					<a class="btn btn-primary btn-sm" href="/Clients/Edit?id=">Edit</a>
+					<a class="btn btnalert-danger btn-sm" href ="/Clients/Delete?id=">Delete</a> 
+				</td>
+
+			</tr>
+		}
+
+	</tbody>
+</table>

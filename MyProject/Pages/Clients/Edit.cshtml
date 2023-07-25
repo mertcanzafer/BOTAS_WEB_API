@@ -1,0 +1,68 @@
+﻿@page
+@model MyProject.Pages.Clients.EditModel
+@{
+}
+
+<br>
+<h2>Seçilen Akışı Güncelle </h2>
+
+@if (Model.errorMessage.Length > 0)
+{
+	<div class='alert alert-warning alert-dismissible fade show' role="alert">
+
+		<strong>@Model.errorMessage</strong>
+		<button type='button' class="btn-close" data-bs-dismiss="alert" aria-lable="Close"></button>
+
+	</div>
+}
+
+<form method="post">
+	<input type="hidden" name="id" value="@Model.clientInfo.id">
+
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Noktalar</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="Noktalar" value="">
+		</div>
+	</div>
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Tarih</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="Tarih" value="">
+		</div>
+	</div>
+
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">DGdeger</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="DGdeger" value="">
+		</div>
+	</div>
+
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Enlem</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="Enlem" value="">
+		</div>
+	</div>
+
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Boylam</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="Boylam" value="">
+		</div>
+	</div>
+
+	<div class="row mb-3">
+		<div class="offset-sm-3 col-sm-3 d-grid">
+			<button type="submit" class="btn btn-primary">Onayla</button>
+		</div>
+		<div class="col-sm-3 d-grid">
+			<a class="btn btn-outline-primary" href="/" role="button">Iptal Et</a>
+		</div>
+
+
+	</div>
+
+
+</form>
